@@ -1,12 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
 
+/* ---------- Theme variables ---------- */
 :root {
   --page-bg-color: #3253b0;
   --accent-color: #3253b0;
   --text-color: #20202a;
-  --primary-color: #f2f1ff;
-  --secondary-color: #cdcddd;
+  --primary-color: #f2f1ff; /* card background */
+  --secondary-color: #cdcddd; /* option buttons */
   --secondary-text-color: #84809b;
+  --surface: #ffffff; /* solution box, pills, tiles */
+  --btn-bg: #3253b0;
+  --card-from: #3253b0;
+  --card-to: #243d8a;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --page-bg-color: #0e0f1a;
+  --accent-color: #8fa8ff;
+  --text-color: #ecebf7;
+  --primary-color: #1a1c2c;
+  --secondary-color: #2c2f45;
+  --secondary-text-color: #a19fbb;
+  --surface: #232638;
+  --btn-bg: #4a6fe0;
+  --card-from: #2b3f8f;
+  --card-to: #1d2a63;
+  color-scheme: dark;
 }
 
 * {
@@ -29,17 +49,17 @@ body {
   font-family: "Google Sans Flex", system-ui, sans-serif;
   font-size: 16px;
   overflow-x: hidden;
+  transition: background-color 0.3s ease;
 }
 
 button {
   font: inherit;
-  touch-action: manipulation; /* no double-tap zoom delay */
+  touch-action: manipulation;
 }
 
 /* =========================================================
-   MOBILE FIRST (default styles = phone)
+   MOBILE FIRST
    ========================================================= */
-
 .app {
   min-height: 100vh;
   min-height: 100dvh;
@@ -59,14 +79,16 @@ main {
   padding: 1rem;
   background: var(--primary-color);
   border-radius: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 /* ---------- Header ---------- */
 main header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
   margin-bottom: 0.75rem;
 }
 
@@ -78,16 +100,34 @@ h1 {
   line-height: 1.1;
 }
 
-main header span {
+.stats {
   flex-shrink: 0;
   padding: 0.3rem 0.75rem;
-  font-size: 0.9rem;
-  background: #fff;
+  color: var(--text-color);
+  font-size: 0.85rem;
+  background: var(--surface);
   border-radius: 2rem;
 }
 
 header strong {
   color: var(--accent-color);
+}
+
+.theme-btn {
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  background: var(--surface);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.theme-btn:active {
+  transform: scale(0.92);
 }
 
 .progress {
@@ -101,17 +141,17 @@ header strong {
 .flashcard {
   display: block;
   padding: 1rem;
-  text-align: left; /* long questions read better left-aligned on phones */
-  background: linear-gradient(135deg, var(--accent-color), #243d8a);
+  text-align: left;
+  background: linear-gradient(135deg, var(--card-from), var(--card-to));
   border-radius: 0.9rem;
 }
 
 .flashcard h2 {
-  color: var(--primary-color);
+  color: #f2f1ff;
   font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.55;
-  white-space: pre-line; /* keeps \n line breaks (tables, passages) */
+  white-space: pre-line;
   overflow-wrap: anywhere;
 }
 
@@ -126,8 +166,11 @@ header strong {
 .answers button {
   position: relative;
   width: 100%;
-  min-height: 52px; /* easy thumb tap */
-  padding: 0.85rem 1rem;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
   color: var(--text-color);
   font-size: 1rem;
   font-weight: 500;
@@ -143,13 +186,31 @@ header strong {
     background 0.2s ease;
 }
 
+.opt-key {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: grid;
+  place-items: center;
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: var(--surface);
+  border-radius: 50%;
+}
+
+.opt-text {
+  flex: 1;
+}
+
 .answers button:not(:disabled):active {
   transform: scale(0.98);
 }
 
 .answers button:focus-visible,
 .nav-btn:focus-visible,
-.restart-btn:focus-visible {
+.restart-btn:focus-visible,
+.theme-btn:focus-visible {
   outline: 3px solid var(--accent-color);
   outline-offset: 3px;
 }
@@ -168,6 +229,12 @@ header strong {
   color: #fff;
   background: #ff5252;
   animation: incorrect-answer 0.4s ease;
+}
+
+.answers button.correct .opt-key,
+.answers button.incorrect .opt-key {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.28);
 }
 
 .answers button.correct::before,
@@ -198,7 +265,7 @@ header strong {
 .solution {
   margin-top: 1rem;
   padding: 0.9rem;
-  background: #fff;
+  background: var(--surface);
   border-left: 4px solid var(--accent-color);
   border-radius: 0.75rem;
   animation: solution-in 0.3s ease;
@@ -220,7 +287,7 @@ header strong {
   overflow-wrap: anywhere;
 }
 
-/* ---------- Previous / Next (sticky bar on phones) ---------- */
+/* ---------- Previous / Next ---------- */
 .nav {
   position: sticky;
   bottom: 0;
@@ -228,7 +295,7 @@ header strong {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
-  margin: 1rem -1rem -1rem; /* stretch to card edges */
+  margin: 1rem -1rem -1rem;
   padding: 0.75rem 1rem;
   padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
   background: var(--primary-color);
@@ -243,13 +310,18 @@ header strong {
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
-  background: var(--accent-color);
+  background: var(--btn-bg);
   border: none;
   border-radius: 0.75rem;
   cursor: pointer;
   transition:
     transform 0.2s ease,
     opacity 0.2s ease;
+}
+
+.nav-btn.finish,
+.restart-btn {
+  background: #27ae60;
 }
 
 .nav-btn:not(:disabled):active,
@@ -262,18 +334,86 @@ header strong {
   cursor: not-allowed;
 }
 
-.restart-btn {
-  width: 100%;
-  margin-top: 0.75rem;
-  background: #2ecc71;
-}
-
 .game-hint {
   margin-top: 1rem;
   color: var(--secondary-text-color);
   font-size: 0.8rem;
   line-height: 1.4;
   text-align: center;
+}
+
+.key-hint {
+  display: none; /* keyboard hint only where a keyboard is likely */
+}
+
+/* ---------- Result screen ---------- */
+.result {
+  padding: 0.5rem 0 0.25rem;
+  text-align: center;
+  animation: solution-in 0.4s ease;
+}
+
+.result-label {
+  color: var(--secondary-text-color);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.result-score {
+  margin-top: 0.25rem;
+  color: var(--accent-color);
+  font-size: clamp(2.6rem, 14vw, 4rem);
+  line-height: 1.1;
+}
+
+.result-score span {
+  color: var(--secondary-text-color);
+  font-size: 0.5em;
+  font-weight: 500;
+}
+
+.result-percent {
+  margin-top: 0.25rem;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.result-msg {
+  margin-top: 0.5rem;
+  color: var(--secondary-text-color);
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.stat {
+  padding: 0.9rem 0.5rem;
+  background: var(--surface);
+  border-radius: 0.75rem;
+}
+
+.stat strong {
+  display: block;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.stat span {
+  color: var(--secondary-text-color);
+  font-size: 0.8rem;
+}
+
+.result-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
 }
 
 /* =========================================================
@@ -299,11 +439,11 @@ header strong {
   }
 
   .flashcard {
-    padding: 1.5rem;
-    text-align: center;
     min-height: 180px;
     display: grid;
     place-content: center;
+    padding: 1.5rem;
+    text-align: center;
   }
 
   .flashcard h2 {
@@ -316,10 +456,6 @@ header strong {
     margin-top: 1.5rem;
   }
 
-  .answers button {
-    text-align: center;
-  }
-
   .solution {
     padding: 1.1rem 1.25rem;
   }
@@ -328,7 +464,6 @@ header strong {
     font-size: 1rem;
   }
 
-  /* nav no longer sticky on bigger screens */
   .nav {
     position: static;
     margin: 1.5rem 0 0;
@@ -342,9 +477,17 @@ header strong {
     margin-top: 2rem;
     font-size: 0.85rem;
   }
+
+  .result-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .result-actions {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-/* Hover only on devices that really have a mouse */
+/* Mouse / keyboard devices */
 @media (hover: hover) and (pointer: fine) {
   .answers button:not(:disabled):hover {
     color: var(--accent-color);
@@ -352,8 +495,13 @@ header strong {
   }
 
   .nav-btn:not(:disabled):hover,
-  .restart-btn:hover {
+  .restart-btn:hover,
+  .theme-btn:hover {
     transform: translateY(-2px);
+  }
+
+  .key-hint {
+    display: inline;
   }
 }
 
@@ -397,17 +545,12 @@ header strong {
   }
 
   .answers button {
-    padding: 0.75rem;
+    padding: 0.65rem 0.75rem;
     font-size: 0.95rem;
   }
 }
 
-/* Phone in landscape: keep the card short */
 @media (max-height: 480px) and (orientation: landscape) {
-  .app {
-    align-items: flex-start;
-  }
-
   .flashcard {
     min-height: 0;
   }
@@ -455,7 +598,8 @@ header strong {
 @media (prefers-reduced-motion: reduce) {
   .answers button,
   .answers button::before,
-  .solution {
+  .solution,
+  .result {
     animation: none !important;
     transition: none;
   }
