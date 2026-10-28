@@ -480,6 +480,312 @@ const aptitudeQuestions = [
     solution:
       "Numbers greater than 5 in 1 to 8 are 6, 7, and 8, so there are 3 favorable outcomes out of 8 possible. Therefore, the probability is 3/8.",
   },
+  {
+    front: "What is 35% of 240?",
+    back: "84",
+    options: ["74", "84", "80", "90"],
+    solution: "35% of 240 = (35/100) × 240 = 0.35 × 240 = 84.",
+  },
+  {
+    front:
+      "A shopkeeper buys an item for ₹800 and sells it for ₹920. What is his profit percentage?",
+    back: "15%",
+    options: ["12%", "15%", "18%", "20%"],
+    solution: "Profit = 920 - 800 = ₹120. Profit % = (120/800) × 100 = 15%.",
+  },
+  {
+    front:
+      "The marked price of a shirt is ₹1,200. If a discount of 20% is given, what is the selling price?",
+    back: "₹960",
+    options: ["₹900", "₹960", "₹980", "₹1,000"],
+    solution:
+      "Discount = 20% of 1200 = ₹240. Selling price = 1200 - 240 = ₹960.",
+  },
+  {
+    front:
+      "A can complete a work in 15 days and B can complete it in 10 days. In how many days can they complete it together?",
+    back: "6 days",
+    options: ["5 days", "6 days", "7.5 days", "8 days"],
+    solution:
+      "A's 1 day work = 1/15, B's 1 day work = 1/10. Together = 1/15 + 1/10 = 2/30 + 3/30 = 5/30 = 1/6. So they finish in 6 days.",
+  },
+  {
+    front: "A car covers 150 km in 2.5 hours. What is its average speed?",
+    back: "60 km/h",
+    options: ["50 km/h", "55 km/h", "60 km/h", "65 km/h"],
+    solution: "Speed = Distance / Time = 150 / 2.5 = 60 km/h.",
+  },
+  {
+    front: "What is the average of the first five prime numbers?",
+    back: "5.6",
+    options: ["5.2", "5.6", "6", "6.2"],
+    solution:
+      "The first five primes are 2, 3, 5, 7, 11. Sum = 28. Average = 28 / 5 = 5.6.",
+  },
+  {
+    front:
+      "₹960 is divided between two people in the ratio 3 : 5. What is the larger share?",
+    back: "₹600",
+    options: ["₹360", "₹480", "₹600", "₹640"],
+    solution:
+      "Total parts = 3 + 5 = 8. One part = 960 / 8 = ₹120. Larger share = 5 × 120 = ₹600.",
+  },
+  {
+    front: "Find the simple interest on ₹5,000 at 8% per annum for 3 years.",
+    back: "₹1,200",
+    options: ["₹1,000", "₹1,200", "₹1,400", "₹1,500"],
+    solution: "SI = (P × R × T) / 100 = (5000 × 8 × 3) / 100 = ₹1,200.",
+  },
+  {
+    front:
+      "Find the compound interest on ₹5,000 at 10% per annum for 2 years, compounded annually.",
+    back: "₹1,050",
+    options: ["₹1,000", "₹1,050", "₹1,100", "₹1,210"],
+    solution:
+      "Amount = 5000 × (1.1)^2 = 5000 × 1.21 = ₹6,050. Compound interest = 6050 - 5000 = ₹1,050.",
+  },
+  {
+    front: "Find the next number in the series: 2, 6, 12, 20, 30, ?",
+    back: "42",
+    options: ["40", "42", "44", "46"],
+    solution:
+      "The differences are 4, 6, 8, 10, so the next difference is 12. 30 + 12 = 42. (Also n × (n+1): 6×7 = 42.)",
+  },
+  {
+    front: "Find the next number in the series: 3, 9, 27, 81, ?",
+    back: "243",
+    options: ["162", "234", "243", "324"],
+    solution: "Each term is multiplied by 3. So 81 × 3 = 243.",
+  },
+  {
+    front: "If CAT is coded as DBU, how will DOG be coded?",
+    back: "EPH",
+    options: ["EPH", "DPH", "EOH", "FPI"],
+    solution:
+      "Each letter is shifted one place forward. C→D, A→B, T→U. So D→E, O→P, G→H, giving EPH.",
+  },
+  {
+    front:
+      'Pointing to a man, Ravi said, "He is the son of my mother\'s only brother." How is the man related to Ravi?',
+    back: "Cousin",
+    options: ["Brother", "Cousin", "Uncle", "Nephew"],
+    solution:
+      "Ravi's mother's brother is Ravi's maternal uncle. The uncle's son is Ravi's cousin.",
+  },
+  {
+    front:
+      "A man walks 10 m north, turns right and walks 5 m, then turns right again and walks 10 m. How far is he from his starting point?",
+    back: "5 m",
+    options: ["5 m", "10 m", "15 m", "25 m"],
+    solution:
+      "North 10 m, then east 5 m, then south 10 m. The north and south movements cancel out, so he is 5 m east of the start.",
+  },
+  {
+    front: "Find the odd one out: 2, 3, 5, 9, 11",
+    back: "9",
+    options: ["2", "3", "9", "11"],
+    solution:
+      "2, 3, 5 and 11 are prime numbers. 9 = 3 × 3 is not prime, so it is the odd one out.",
+  },
+  {
+    front: "What is the LCM of 12 and 18?",
+    back: "36",
+    options: ["24", "36", "48", "72"],
+    solution: "12 = 2² × 3 and 18 = 2 × 3². LCM = 2² × 3² = 36.",
+  },
+  {
+    front: "What is the HCF of 36 and 48?",
+    back: "12",
+    options: ["6", "8", "12", "24"],
+    solution: "36 = 2² × 3² and 48 = 2⁴ × 3. HCF = 2² × 3 = 12.",
+  },
+  {
+    front:
+      "A fair die is rolled once. What is the probability of getting an even number?",
+    back: "1/2",
+    options: ["1/6", "1/3", "1/2", "2/3"],
+    solution:
+      "Even numbers on a die are 2, 4, 6, so 3 favourable outcomes out of 6. Probability = 3/6 = 1/2.",
+  },
+  {
+    front: "In how many ways can the letters of the word LEVEL be arranged?",
+    back: "30",
+    options: ["120", "60", "30", "20"],
+    solution:
+      "LEVEL has 5 letters with L repeated 2 times and E repeated 2 times. Arrangements = 5! / (2! × 2!) = 120 / 4 = 30.",
+  },
+  {
+    front:
+      "What is the angle between the hour hand and the minute hand of a clock at 3:30?",
+    back: "75°",
+    options: ["60°", "75°", "90°", "105°"],
+    solution:
+      "Hour hand at 3:30 = 3 × 30 + 30 × 0.5 = 105°. Minute hand at 30 minutes = 30 × 6 = 180°. Difference = 180 - 105 = 75°.",
+  },
+  {
+    front: "How many odd days are there in a leap year?",
+    back: "2",
+    options: ["0", "1", "2", "3"],
+    solution:
+      "A leap year has 366 days = 52 weeks + 2 days. So there are 2 odd days.",
+  },
+  {
+    front:
+      "Pipe A can fill a tank in 6 hours and pipe B can empty it in 12 hours. If both are opened together, how long will it take to fill the empty tank?",
+    back: "12 hours",
+    options: ["8 hours", "10 hours", "12 hours", "18 hours"],
+    solution:
+      "Net work in 1 hour = 1/6 - 1/12 = 2/12 - 1/12 = 1/12. So the tank fills in 12 hours.",
+  },
+  {
+    front:
+      "Two trains of length 120 m and 130 m run in opposite directions at 60 km/h and 40 km/h. In how many seconds will they cross each other?",
+    back: "9 seconds",
+    options: ["8 seconds", "9 seconds", "10 seconds", "12 seconds"],
+    solution:
+      "Relative speed = 60 + 40 = 100 km/h = 100 × 5/18 = 250/9 m/s. Total distance = 120 + 130 = 250 m. Time = 250 / (250/9) = 9 seconds.",
+  },
+  {
+    front:
+      "A boat's speed in still water is 12 km/h and the stream speed is 3 km/h. How much time will it take to go 30 km downstream?",
+    back: "2 hours",
+    options: ["2 hours", "2.5 hours", "3 hours", "4 hours"],
+    solution: "Downstream speed = 12 + 3 = 15 km/h. Time = 30 / 15 = 2 hours.",
+  },
+  {
+    front: "If x + 1/x = 3, what is the value of x² + 1/x²?",
+    back: "7",
+    options: ["5", "7", "9", "11"],
+    solution: "Square both sides: x² + 2 + 1/x² = 9. So x² + 1/x² = 9 - 2 = 7.",
+  },
+  {
+    front: "What is the square root of 1296?",
+    back: "36",
+    options: ["34", "36", "38", "46"],
+    solution: "36 × 36 = 1296, so the square root of 1296 is 36.",
+  },
+  {
+    front:
+      "Sales in Q1 were 120 units and in Q2 were 150 units. What is the percentage increase from Q1 to Q2?",
+    back: "25%",
+    options: ["20%", "25%", "30%", "35%"],
+    solution:
+      "Increase = 150 - 120 = 30. Percentage increase = (30/120) × 100 = 25%.",
+  },
+  {
+    front:
+      "In a class, Ravi is 12th from the top and 28th from the bottom. How many students are there in the class?",
+    back: "39",
+    options: ["38", "39", "40", "41"],
+    solution:
+      "Total = 12 + 28 - 1 = 39 (Ravi is counted twice, so subtract 1).",
+  },
+  {
+    front:
+      "The sum of the ages of a father and his son is 50 years. The father is 4 times as old as the son. What is the son's age?",
+    back: "10 years",
+    options: ["8 years", "10 years", "12 years", "15 years"],
+    solution:
+      "Let the son's age be x. Father = 4x. x + 4x = 50, so 5x = 50 and x = 10 years.",
+  },
+  {
+    front: "Which of the following numbers is divisible by 11?",
+    back: "2728",
+    options: ["2728", "2729", "2731", "2735"],
+    solution:
+      "For 11, the difference between the sum of digits at odd and even places must be 0 or a multiple of 11. For 2728: (2 + 2) - (7 + 8) = -11, which is divisible by 11. (2728 = 11 × 248)",
+  },
+  {
+    front: "What is the unit digit of 7^53?",
+    back: "7",
+    options: ["1", "3", "7", "9"],
+    solution:
+      "The unit digits of powers of 7 repeat in a cycle of 4: 7, 9, 3, 1. 53 divided by 4 leaves remainder 1, so the unit digit is the 1st in the cycle = 7.",
+  },
+  {
+    front:
+      "The price of an item increases by 20% and then decreases by 20%. What is the net change in price?",
+    back: "4% decrease",
+    options: ["No change", "4% decrease", "4% increase", "2% decrease"],
+    solution:
+      "Let the price be 100. After a 20% rise it is 120. After a 20% fall it is 120 × 0.8 = 96. Net change = 4% decrease.",
+  },
+  {
+    front: "What is the sum of the first 50 natural numbers?",
+    back: "1275",
+    options: ["1250", "1275", "1300", "2550"],
+    solution: "Sum = n(n+1)/2 = 50 × 51 / 2 = 1275.",
+  },
+  {
+    front:
+      "What is the smallest number by which 72 must be multiplied to make it a perfect square?",
+    back: "2",
+    options: ["2", "3", "4", "6"],
+    solution:
+      "72 = 2³ × 3². The power of 2 is odd, so multiply by 2 to get 2⁴ × 3² = 144 = 12².",
+  },
+  {
+    front:
+      "Statements: All cats are animals. All animals are living beings. Conclusions: I. All cats are living beings. II. All living beings are cats. Select the correct option.",
+    back: "Only I follows",
+    options: [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "Neither follows",
+    ],
+    solution:
+      "Cats ⊂ Animals ⊂ Living beings, so all cats are living beings (I follows). The reverse (II) is not necessarily true.",
+  },
+  {
+    front: "Choose the word closest in meaning to BENEVOLENT.",
+    back: "Kind",
+    options: ["Cruel", "Kind", "Lazy", "Angry"],
+    solution:
+      "Benevolent means well-meaning and kind. The other options do not match.",
+  },
+  {
+    front: "Choose the word opposite in meaning to SCARCE.",
+    back: "Abundant",
+    options: ["Rare", "Limited", "Abundant", "Costly"],
+    solution:
+      "Scarce means in short supply. Its opposite is abundant, meaning plentiful.",
+  },
+  {
+    front: "Choose the correctly spelt word.",
+    back: "Accommodation",
+    options: ["Acommodation", "Accomodation", "Accommodation", "Acomodation"],
+    solution:
+      "The correct spelling has double 'c' and double 'm': Accommodation.",
+  },
+  {
+    front: 'What does the idiom "Once in a blue moon" mean?',
+    back: "Very rarely",
+    options: ["Very often", "Very rarely", "Every month", "At night"],
+    solution: "'Once in a blue moon' means something that happens very rarely.",
+  },
+  {
+    front: "What is the area of a circle with radius 7 cm? (Take π = 22/7)",
+    back: "154 cm²",
+    options: ["44 cm²", "144 cm²", "154 cm²", "308 cm²"],
+    solution: "Area = πr² = (22/7) × 7 × 7 = 22 × 7 = 154 cm².",
+  },
+  {
+    front:
+      "The average of 5 numbers is 20. If one of the numbers, 30, is removed, what is the average of the remaining 4 numbers?",
+    back: "17.5",
+    options: ["15", "17.5", "18", "20"],
+    solution:
+      "Total of 5 numbers = 5 × 20 = 100. After removing 30, the sum = 70. New average = 70 / 4 = 17.5.",
+  },
+  {
+    front:
+      "Two people start from the same point and walk in opposite directions at 4 km/h and 6 km/h. How far apart will they be after 3 hours?",
+    back: "30 km",
+    options: ["18 km", "24 km", "30 km", "36 km"],
+    solution:
+      "They move in opposite directions, so their speeds add up: 4 + 6 = 10 km/h. Distance = 10 × 3 = 30 km.",
+  },
 ];
 
 export default aptitudeQuestions;
