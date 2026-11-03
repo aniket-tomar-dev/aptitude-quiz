@@ -59,7 +59,6 @@ function ResultPage() {
           ? { label: "Average 💪", color: "#f39c12" }
           : { label: "Needs Practice 📚", color: "#e74c3c" };
 
-  // Filter questions for review
   const filteredQuestions = (questions || []).filter((q, i) => {
     const userAns = answers?.[i];
     if (filter === "correct") return userAns === q.correctAnswer;

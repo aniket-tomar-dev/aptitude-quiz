@@ -1,4 +1,3 @@
-import React from "react";
 import { CATEGORIES } from "../data/categories";
 import { getTestsByCategory } from "../data/index";
 import CategoryCard from "../components/CategoryCard";
@@ -19,7 +18,9 @@ function CategoriesPage() {
           return (
             <div key={cat.id} style={{ position: "relative" }}>
               <CategoryCard category={cat} />
-              <span className="cat-test-count">{testCount} test{testCount !== 1 ? "s" : ""}</span>
+              <span className="cat-test-count">
+                {testCount} test{testCount !== 1 ? "s" : ""}
+              </span>
             </div>
           );
         })}

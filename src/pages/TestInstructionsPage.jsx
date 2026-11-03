@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams, Link, Navigate, useNavigate } from "react-router-dom";
 import { getTestById } from "../data/index";
 import { getCategoryBySlug } from "../data/categories";
