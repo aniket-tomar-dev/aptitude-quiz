@@ -159,6 +159,239 @@ const englishGrammar001 = {
       explanation:
         "A synonym is a word with a similar meaning. 'Joyful' is a synonym of 'happy'.",
     },
+    {
+      id: 16,
+      question: "Which word is a synonym of 'big'?",
+      options: ["Tiny", "Narrow", "Large", "Weak"],
+      correctAnswer: "Large",
+      explanation: "'Large' means the same as 'big'. 'Tiny' is its opposite.",
+    },
+    {
+      id: 17,
+      question: "Which word is an antonym of 'hot'?",
+      options: ["Warm", "Cold", "Spicy", "Boiling"],
+      correctAnswer: "Cold",
+      explanation:
+        "An antonym is a word with the opposite meaning. 'Cold' is the opposite of 'hot'.",
+    },
+    {
+      id: 18,
+      question: "Which word is a synonym of 'quick'?",
+      options: ["Rapid", "Slow", "Lazy", "Late"],
+      correctAnswer: "Rapid",
+      explanation:
+        "'Rapid' and 'quick' both describe something that happens or moves fast.",
+    },
+    {
+      id: 19,
+      question: "Which word is an antonym of 'brave'?",
+      options: ["Bold", "Fearless", "Strong", "Cowardly"],
+      correctAnswer: "Cowardly",
+      explanation:
+        "'Brave' means showing courage, while 'cowardly' means lacking courage.",
+    },
+    {
+      id: 20,
+      question: "Which word is a synonym of 'begin'?",
+      options: ["Finish", "Stop", "Start", "Delay"],
+      correctAnswer: "Start",
+      explanation:
+        "'Begin' and 'start' both mean to take the first step of an action.",
+    },
+    {
+      id: 21,
+      question: "Which word is an antonym of 'ancient'?",
+      options: ["Old", "Historic", "Antique", "Modern"],
+      correctAnswer: "Modern",
+      explanation:
+        "'Ancient' means very old, while 'modern' means belonging to the present time.",
+    },
+    {
+      id: 22,
+      question: "Which word is a synonym of 'smart'?",
+      options: ["Dull", "Rude", "Clever", "Quiet"],
+      correctAnswer: "Clever",
+      explanation:
+        "'Clever' means intelligent and quick to understand, like 'smart'.",
+    },
+    {
+      id: 23,
+      question: "Which word is an antonym of 'generous'?",
+      options: ["Kind", "Friendly", "Wealthy", "Selfish"],
+      correctAnswer: "Selfish",
+      explanation:
+        "A generous person gives freely, while a selfish person thinks only of themselves.",
+    },
+    {
+      id: 24,
+      question: "Which word is a synonym of 'tired'?",
+      options: ["Energetic", "Cheerful", "Awake", "Exhausted"],
+      correctAnswer: "Exhausted",
+      explanation:
+        "'Exhausted' means extremely tired, so it is a stronger synonym of 'tired'.",
+    },
+    {
+      id: 25,
+      question: "Which word is an antonym of 'victory'?",
+      options: ["Triumph", "Defeat", "Success", "Win"],
+      correctAnswer: "Defeat",
+      explanation: "'Victory' means winning, while 'defeat' means losing.",
+    },
+    {
+      id: 26,
+      question: "Which word is a synonym of 'beautiful'?",
+      options: ["Ugly", "Plain", "Gorgeous", "Messy"],
+      correctAnswer: "Gorgeous",
+      explanation: "'Gorgeous' means very attractive or beautiful.",
+    },
+    {
+      id: 27,
+      question: "Which word is an antonym of 'increase'?",
+      options: ["Expand", "Grow", "Rise", "Decrease"],
+      correctAnswer: "Decrease",
+      explanation:
+        "'Increase' means to become greater, while 'decrease' means to become smaller.",
+    },
+    {
+      id: 28,
+      question: "Which word is a synonym of 'difficult'?",
+      options: ["Easy", "Hard", "Simple", "Clear"],
+      correctAnswer: "Hard",
+      explanation:
+        "'Hard' and 'difficult' both describe something that takes a lot of effort.",
+    },
+    {
+      id: 29,
+      question: "Which word is an antonym of 'transparent'?",
+      options: ["Clear", "Thin", "Bright", "Opaque"],
+      correctAnswer: "Opaque",
+      explanation:
+        "'Transparent' means you can see through it, while 'opaque' means you cannot.",
+    },
+    {
+      id: 30,
+      question: "Which word is a synonym of 'huge'?",
+      options: ["Enormous", "Tiny", "Short", "Average"],
+      correctAnswer: "Enormous",
+      explanation: "'Enormous' means extremely large, just like 'huge'.",
+    },
+    {
+      id: 31,
+      question: "Which word is an antonym of 'arrive'?",
+      options: ["Reach", "Enter", "Depart", "Stay"],
+      correctAnswer: "Depart",
+      explanation:
+        "'Arrive' means to reach a place, while 'depart' means to leave it.",
+    },
+    {
+      id: 32,
+      question: "Which word is a synonym of 'angry'?",
+      options: ["Calm", "Furious", "Pleased", "Sleepy"],
+      correctAnswer: "Furious",
+      explanation: "'Furious' means extremely angry.",
+    },
+    {
+      id: 33,
+      question: "Which word is an antonym of 'rough'?",
+      options: ["Coarse", "Bumpy", "Hard", "Smooth"],
+      correctAnswer: "Smooth",
+      explanation:
+        "'Rough' describes an uneven surface, while 'smooth' describes a surface that is even and flat.",
+    },
+    {
+      id: 34,
+      question: "Which word is a synonym of 'silent'?",
+      options: ["Noisy", "Loud", "Quiet", "Busy"],
+      correctAnswer: "Quiet",
+      explanation: "'Silent' and 'quiet' both describe an absence of noise.",
+    },
+    {
+      id: 35,
+      question: "Which word is an antonym of 'expensive'?",
+      options: ["Costly", "Valuable", "Cheap", "Rich"],
+      correctAnswer: "Cheap",
+      explanation:
+        "'Expensive' means high in price, while 'cheap' means low in price.",
+    },
+    {
+      id: 36,
+      question: "Which word is a synonym of 'rich'?",
+      options: ["Wealthy", "Poor", "Humble", "Needy"],
+      correctAnswer: "Wealthy",
+      explanation:
+        "'Wealthy' means having a lot of money or possessions, like 'rich'.",
+    },
+    {
+      id: 37,
+      question: "Which word is an antonym of 'knowledge'?",
+      options: ["Wisdom", "Learning", "Truth", "Ignorance"],
+      correctAnswer: "Ignorance",
+      explanation:
+        "'Knowledge' is awareness and understanding, while 'ignorance' is a lack of it.",
+    },
+    {
+      id: 38,
+      question: "Which word is a synonym of 'honest'?",
+      options: ["Deceitful", "Truthful", "Sly", "Greedy"],
+      correctAnswer: "Truthful",
+      explanation:
+        "'Truthful' means telling the truth, which is what an honest person does.",
+    },
+    {
+      id: 39,
+      question: "Which word is an antonym of 'early'?",
+      options: ["Soon", "Quick", "Late", "Fast"],
+      correctAnswer: "Late",
+      explanation:
+        "'Early' means before the expected time, while 'late' means after it.",
+    },
+    {
+      id: 40,
+      question: "Which word is a synonym of 'danger'?",
+      options: ["Safety", "Comfort", "Peace", "Risk"],
+      correctAnswer: "Risk",
+      explanation:
+        "'Risk' refers to the possibility of harm or loss, similar to 'danger'.",
+    },
+    {
+      id: 41,
+      question: "Which word is an antonym of 'strong'?",
+      options: ["Powerful", "Tough", "Weak", "Sturdy"],
+      correctAnswer: "Weak",
+      explanation:
+        "'Strong' means having power or strength, while 'weak' means lacking it.",
+    },
+    {
+      id: 42,
+      question: "Which word is a synonym of 'choose'?",
+      options: ["Select", "Reject", "Ignore", "Forget"],
+      correctAnswer: "Select",
+      explanation:
+        "'Choose' and 'select' both mean to pick something from several options.",
+    },
+    {
+      id: 43,
+      question: "Which word is an antonym of 'permanent'?",
+      options: ["Lasting", "Fixed", "Stable", "Temporary"],
+      correctAnswer: "Temporary",
+      explanation:
+        "'Permanent' means lasting forever, while 'temporary' means lasting only a short time.",
+    },
+    {
+      id: 44,
+      question: "Which word is a synonym of 'ask'?",
+      options: ["Answer", "Reply", "Inquire", "Tell"],
+      correctAnswer: "Inquire",
+      explanation: "'Inquire' means to ask for information, just like 'ask'.",
+    },
+    {
+      id: 45,
+      question: "Which word is an antonym of 'accept'?",
+      options: ["Agree", "Refuse", "Receive", "Allow"],
+      correctAnswer: "Refuse",
+      explanation:
+        "'Accept' means to agree to receive something, while 'refuse' means to say no to it.",
+    },
   ],
 };
 
